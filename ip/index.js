@@ -75,14 +75,32 @@ async function ipAdresimiAl(){
 
 
 //kodlar buraya gelecek
-  ipAdresimiAl().then(() => {
-	var url = `https://apis.ergineer.com/ipgeoapi/${benimIP}`;
+async function getIP() {
+	try {
+	  const { data: benimIP } = await axios.get('https://apis.ergineer.com/ipadresim');
+	  const url = `https://apis.ergineer.com/ipgeoapi/${benimIP}`;
+	  const { data } = await axios.get(url);
+	  
+	  const card = document.createElement('div');
+	  card.className = 'card';
   
-	axios({
-		method: 'get',
-		url: url,
-	  })
-	  .then(function(response){
-		var data = response.data;//adim2
-	  })
-  });
+	  card.innerHTML = `
+		<img src="${data.flag_url}" />
+		<div class="card-info">
+		  <h3 class="ip">${benimIP}</h3>
+		  <p class="ulke">${data.country} (${data.country_code})</p>
+		  <p>Enlem: ${data.latitude} Boylam: ${data.longitude}</p>
+		  <p>Şehir: ${data.city}</p>
+		  <p>Saat Dilimi: ${data.timezone}</p>
+		  <p>Para Birimi: ${data.currency}</p>
+		  <p>ISP: ${data.isp}</p>
+		</div>
+	  `;
+	  
+	  document.querySelector('.cards').appendChild(card);
+	} catch (error) {
+	  console.error('Hata:', error);
+	}
+  }
+  
+  getIP();
