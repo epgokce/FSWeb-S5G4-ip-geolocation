@@ -82,5 +82,7 @@ async function ipAdresimiAl(){
 		method: 'get',
 		url: url,
 	  })
-	  
+	  .then(function(response){
+		var data = response.data;//adim2
+	  })
   });
