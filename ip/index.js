@@ -1,5 +1,5 @@
 //axios import buraya gelecek
-
+import axios from 'axios';
 var benimIP;
 
 
@@ -31,11 +31,14 @@ async function ipAdresimiAl(){
 	ADIM 5'e gelene kadar fonksiyonunuzu test etmek için ip nizi URL'ye manuel olarak ekleyebilirsiniz.
 */
 
+
 /*
 	ADIM 2: Geri döndürülen verileri inceleyin, bu sizin ip bilgileriniz! Bileşen fonksiyonunuzu geliştirmek içindeki bu veri yapısını
 	iyice anlamanız gerekmektedir.
 	
 */
+
+	
 /*
 	ADIM 3: Argümanı sadece 1 nesne kabül eden bir fonksiyon oluşturun.
     DOM metotlarını ve özelliklerini kullanarak, şunları gerçekleştirin:
@@ -54,10 +57,12 @@ async function ipAdresimiAl(){
     </div>
 */
 
+
 /*
 	ADIM 4: API'den alınan verileri kullanarak ADIM 3'te verilen yapıda bir kart oluşturun ve 
 	bu kartı DOM olarak .cards elementinin içine ekleyin. 
 */
+
 
 /*
 	ADIM 5: Manuel olarak eklediğiniz IP adresini dinamiğe dönüştürün. 
@@ -70,3 +75,24 @@ async function ipAdresimiAl(){
 
 
 //kodlar buraya gelecek
+var benimIP;
+
+
+
+ipAdresimiAl().then(() => {
+  var url = `https://apis.ergineer.com/ipgeoapi/${benimIP}`;
+
+  axios({
+    method: 'get',
+    url: url,
+  })
+    .then(function (response) {
+      var data = response.data;
+console.log(benimIP);
+});
+}
+
+
+
+
+);

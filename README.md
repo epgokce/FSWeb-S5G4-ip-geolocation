@@ -22,24 +22,24 @@ Bu projede Ergineer IP Geolocation API'sine sorgu atacağız ve sonuçlarla IP'y
 
 **Aşağıdaki adımları uygulayın:**
 
-* [ ] Bu projeyi forklayarak bir kopyasını oluşturun.
-* [ ] Reponun kendi versiyonunuzu klonlayın.
-* [ ] Commitinizi pushlayın: `git push origin main`.
+* [+] Bu projeyi forklayarak bir kopyasını oluşturun.
+* [+] Reponun kendi versiyonunuzu klonlayın.
+* [+] Commitinizi pushlayın: `git push origin main`.
 
 
 ### Proje Kurulumu
 
-* [ ] Komut satırınızla projenin kök dizinine gidin.
-* [ ] `npm install` komutuyla `package.json` da listelenen proje bağımlılıklarını indirin
-* [ ] `npm start` komutuyla projenizi derleyip çalıştırın.
+* [+] Komut satırınızla projenin kök dizinine gidin.
+* [+] `npm install` komutuyla `package.json` da listelenen proje bağımlılıklarını indirin
+* [+] `npm start` komutuyla projenizi derleyip çalıştırın.
 
 ### Axios Kurulumu
 
 #### npm ile Axios yüklemesi 
 
-* [ ] Komut satırınızla projenin kök dizinine gidin.
-* [ ] `npm install axios` komutuyla bağımlılığı indirin (bu şekilde `package.json` a da eklenecektir).
-* [ ] Yukarıdaki `ipgeo/index.js` dosyasını açın, ve en üstüne `import axios from 'axios';` yazarak kütüphaneyi import edin.
+* [+] Komut satırınızla projenin kök dizinine gidin.
+* [+] `npm install axios` komutuyla bağımlılığı indirin (bu şekilde `package.json` a da eklenecektir).
+* [+] Yukarıdaki `ipgeo/index.js` dosyasını açın, ve en üstüne `import axios from 'axios';` yazarak kütüphaneyi import edin.
 
 ### Bölüm 1: IP Geolocation API'den Data Sorgusu
 
