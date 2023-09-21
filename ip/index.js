@@ -75,24 +75,12 @@ async function ipAdresimiAl(){
 
 
 //kodlar buraya gelecek
-var benimIP;
-
-
-
-ipAdresimiAl().then(() => {
-  var url = `https://apis.ergineer.com/ipgeoapi/${benimIP}`;
-
-  axios({
-    method: 'get',
-    url: url,
-  })
-    .then(function (response) {
-      var data = response.data;
-console.log(benimIP);
-});
-}
-
-
-
-
-);
+  ipAdresimiAl().then(() => {
+	var url = `https://apis.ergineer.com/ipgeoapi/${benimIP}`;
+  
+	axios({
+		method: 'get',
+		url: url,
+	  })
+	  
+  });
